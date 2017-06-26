@@ -223,10 +223,6 @@ pre > code {
   position: relative;
 }
 
-.site-header.homepage {
-  margin-bottom: 60px;
-}
-
 @media screen and (max-width: 600px) {
   .site-header.homepage {
     margin-bottom: 45px;
@@ -435,6 +431,10 @@ pre > code {
 .post-meta a:hover {
   color: #111111;
   text-decoration: none;
+}
+
+.home {
+  margin-top: 60px;
 }
 
 .home .post-list {
