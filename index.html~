@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<header class="site-hero" style="background-image: url({{site.baseurl}}/images/header.jpg)"></header>
+<header class="site-hero" style="background-image: url({{site.baseurl}}/images/header.png)"></header>
 <div class="wrapper">
   <div class="home">
 <ul class="post-list">
