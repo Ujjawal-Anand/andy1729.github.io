@@ -6,7 +6,7 @@
 name: Ujjawal Annad
 
 # Short bio or description (displayed in the header)
-description: Software Developer - A jack of all Trades
+description: Android Developer
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: # https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
@@ -27,7 +27,7 @@ footer-links:
   pinterest:
   rss: # just type anything here for a working RSS icon
   twitter: ujjawal1729
-  stackoverflow: #users/3748736/andy1729 # your stackoverflow profile, e.g. "users/50476/bart-kiers"
+  stackoverflow: users/3748736/andy1729 # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
 
