@@ -5,8 +5,12 @@
 <lastmod>2017-01-30T00:00:00+05:30</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/Top-Reads/</loc>
+<loc>http://localhost:4000/Top-Reads-2016/</loc>
 <lastmod>2017-01-31T00:00:00+05:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/Book-Review-2016/</loc>
+<lastmod>2017-02-02T00:00:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/404/</loc>

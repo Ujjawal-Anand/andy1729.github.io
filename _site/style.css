@@ -223,11 +223,6 @@ pre > code {
   position: relative;
 }
 
-@media screen and (max-width: 600px) {
-  .site-header.homepage {
-    margin-bottom: 45px;
-  }
-}
 .site-title {
   font-size: 26px;
   font-weight: 700;
