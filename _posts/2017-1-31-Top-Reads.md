@@ -1,0 +1,103 @@
+---
+layout: post
+title: My Favourite Read From The Past - Startups, Tech. Life
+---
+
+> Reading is to the mind what exercise is to the body.<br/>
+> -Joseph Addision
+
+One of the habits that I grew in myself which I am really proud of and really goes into making the person I am today is: **Learning a lot of things by Reading a lot of things.** <br/>
+In course of time, I've consumed many artciles (mostly on Internet) and have bookmarked the ones I like the most. The following is a list some of my favourite articles from the past year in no particular order.
+
+I’d encourage you to scroll through the entire list and read the ones that seem interesting to you. And feel free to share what you loved to read this year
+
+
+##### [Teach yourself programming in 10 years](http://norvig.com/21-days.html)
+>The key is deliberative practice: not just doing it again and again, but challenging yourself with a task that is just beyond your current ability, trying it, analyzing your performance while and after doing it, and correcting any mistakes. Then repeat. And repeat again.
+
+##### [The reductive seduction of other people's problem.  ](https://thedevelopmentset.com/the-reductive-seduction-of-other-people-s-problems-3c07b307732d#.40qkr1ptl)
+> A well written, and urgently needed analysis of the relationship between American youth (or say any first world country's youth) and the world of international development.
+
+##### [How to stop giving f@&% what people think - start living your life](https://medium.com/life-hacking-2/how-to-stop-giving-a-f-what-people-think-46bf86584c95)
+>Start standing up for what you believe in — causes, opinions, anything. You’re going to have people that disagree with you anyways, so why not express how you truly feel?
+
+##### [An engineer's guide to stock option](https://blog.alexmaccaw.com/an-engineers-guide-to-stock-options)
+>This guide is an attempt to correct some of the imbalance in information between companies and employees, and explain in plain English the whole stock option process.
+
+##### [So, you want to work in security? ](https://medium.freecodecamp.com/so-you-want-to-work-in-security-bc6c10157d23)
+> A helpful and insightful article from Parisa Tabriz - head of Google Chrome security team, to anyone who wants to work in security field.
+
+##### [What happens when ](https://github.com/alex/what-happens-when)
+> An attempt to answer the age old interview question "What happens when you type google.com into your browser's address box and press enter?
+
+##### [An open guide to equity compensation](https://github.com/jlevy/og-equity-compensation)
+> More like a small book, trying to explain a rather very confusing topic: *Equity Compensation*
+
+##### [An introduction to stock market](https://invento.quora.com/Introduction-to-Finance-Stock-Markets?share=1&srid=iGUX)
+> A very helpful post to make you understand the basics of stock market from none other than Quora Rockstart **Balaji Viswanathan**
+
+##### [Emotional Intelligence: The Social Skills You Weren't Taught in School](http://lifehacker.com/emotional-intelligence-the-social-skills-you-werent-ta-1697704987?utm_source=pocket&utm_medium=email&utm_campaign=pockethits)
+> A helpful guide regarding how to identify or deal with our own emotions, or the emotions of others
+
+##### [How to Negotiate Nicely Without Being a Pushover](https://hbr.org/2015/04/how-to-negotiate-nicely-without-being-a-pushover?utm_source=pocket&utm_medium=email&utm_campaign=pockethits)
+> How exactly do you drive a hard bargain while also employing soft skills? How do you advocate for what you want without burning important bridges? How? Read the article to find out.
+
+##### [10 tricks to appear smart during meetings ](https://medium.com/conquering-corporate-america/10-tricks-to-appear-smart-during-meetings-27b489a39d1a)
+> Sometimes meetings can be difficult if you start daydreaming about your next vacation, your next nap, or bacon. When this happens, it’s good to have some fallback tricks to fall back on
+
+##### [How quitting my corporate job for my startup dream f*cked my life up ](https://medium.com/swlh/how-quitting-my-corporate-job-for-my-startup-dream-f-cked-my-life-up-3b6b3e29b318)
+> Day by day, I was getting lonelier and more depressive as I avoided social occasions. My startup progress was not as fast as my social circle imagined it to be and I was fed up with telling people it took years for startups like Facebook and Twitter to arrive at where they are now.
+
+##### [How to start a startup](https://www.superhi.com/blog/how-to-start-a-startup-without-ruining-your-life)
+> Startups are emotional roller coasters that one minute make you feel like you’re changing the world and the next minute, that everything is falling apart. This guide about how to start a startup may help.
+
+##### [15 Tricks to Appear Smart in Emails ](https://medium.com/conquering-corporate-america/15-tricks-to-appear-smart-in-emails-608f5cf27975)
+> Your email writing, sending and ignoring skills are just as important as your nodding skills, and even more important than your copying and pasting skills. Here are 15 email tricks that will make you appear smart, passionate, dedicated and most of all, smart.
+
+##### [The science of why you should spend your time on expriences not thing ](https://www.fastcompany.com/3043858/world-changing-ideas/the-science-of-why-you-should-spend-your-money-on-experiences-not-thing?utm_source=pocket&utm_medium=email&utm_campaign=pockethits)
+> We know that money can make you happier, though after your basic needs are met, it doesn’t make you that much happier. But one of the biggest questions is how to allocate our money, which is (for most of us) a limited resource.
+
+##### [7 Rules for Creating Gorgeous UI (Part 1)](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-1-559d4e805cda)
+> An UI/UX design guide for nerds - part 1
+
+##### [7 Rules for Creating Gorgeous UI (Part 2)](https://medium.com/@erikdkennedy/7-rules-for-creating-gorgeous-ui-part-2-430de537ba96)
+> An UI?UX design for nerds - part 2
+
+##### [How I Learned to Stop Procrastinating, & Love Letting Go](https://zenhabits.net/leggo/)
+> The Zen way to stop Procrastinating, really helpul guide to achieve life long success.
+
+##### [Relearning the Art of Asking Questions ](https://hbr.org/2015/03/relearning-the-art-of-asking-questions?utm_source=pocket&utm_medium=email&utm_campaign=pockethits)
+>  Asking clarifying questions can help uncover the real intent behind what is said. These help us understand each other better and lead us toward relevant follow-up questions.
+
+##### [Google CFO retires with a candid memo about work/life balance](http://mashable.com/2015/03/10/googles-cfo-retires-memo/#e5IbFn5k3kqA)
+> In the end, life is wonderful, but nonetheless a series of trade offs, especially between business/professional endeavours and family/community.
+
+##### [Great Hackers](http://www.paulgraham.com/gh.html)
+> I know a handful of super-hackers, so I sat down and thought about what they have in common. Their defining quality is probably that they really love to program. Ordinary programmers write code to pay the bills. Great hackers think of it as something they do for fun, and which they're delighted to find people will pay them for. - Paul Graham, founder of YC
+
+##### [Books worth reading, as recommended by Bill Gates, Susan Cain and more... ](http://ideas.ted.com/books-worth-reading-this-holiday-recommended-by-bill-gates-susan-cain-and-more/)
+> A curated list ofrecommended books from great personalities
+
+##### [Advice for ambitious 19 year olds](http://blog.samaltman.com/advice-for-ambitious-19-year-olds)
+> From Sam Altman, _President of Y Combinator_
+
+##### [Good and Bad Reasons to Become an Entrepreneur](https://medium.com/i-m-h-o/good-and-bad-reasons-to-become-an-entrepreneur-decf0766de8d)
+> Some valuable insights on being Entrepreneur from Dustin Moskovitz, _cofounder of facebook_
+
+##### [What I tell all new programmers](https://josephg.com/blog/what-i-tell-all-new-programmers/)
+> An assorted set of wisdom to all new programmers.
+
+##### [What is your favourite productivity hack? ](https://www.forbes.com/sites/quora/2014/05/19/as-a-startup-ceo-what-is-your-favorite-productivity-hack/#717c75ca6887)
+> Invaluable insights to control your life and get the best out of it.
+
+##### [Why learning to code is so damn hard](https://www.vikingcodeschool.com/posts/why-learning-to-code-is-so-damn-hard)
+> What every beginner absolutely needs to know about the journey ahead
+
+##### [This is your brain on mobile](https://medium.com/@jgvandehey/this-is-your-brain-on-mobile-15308056cfae)
+> A critique of destructive smartphone habits diagnosed by someone that makes a living off of them.
+
+##### [The real 10 algorithms that dominate our world](https://medium.com/@_marcos_otero/the-real-10-algorithms-that-dominate-our-world-e95fa9f16c04)
+> Maybe a little more than 10
+
+##### [9 Things I Learned as a Software Engineer](https://medium.com/@maebert/9-things-i-learned-as-a-software-engineer-c2c9f76c9266)
+> This is a note to the younger self, a list of things author learned, sometimes painfully, in the past three years.
