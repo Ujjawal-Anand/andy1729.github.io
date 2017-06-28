@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="article:publisher" content="https://www.facebook.com/andy2520" />
+  <meta property="article:author" content="https://www.facebook.com/andy2520" />
+  <link rel="author" href=""/>
+  <title>How to Set Up a Private Maven Repository For Free - Ujjawal Anand</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+
+    
+        
+    
+    
+    <a class="cta" href="/contact">Contact</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>How to Set Up a Private Maven Repository For Free</h1>
+        <h2 class="headline">April 21, 2016</h2>
+    </header>
+    <section id="post-body">
+        <p>Being a fan of factorisation, I recently decided to extract some redundant modules from my released Android Apps and make them standalone to be used in future projects. I ended up having easy to use dependencies like this <code class="highlighter-rouge">compile {libraryName}</code>, seems cool ? nah ?</p>
+
+<p>This guide applies only for <strong>private projects</strong> that you’d like to keep in secret, or share solely with agency teammates… if you’d like to go public, check Bintray, Maven Central or Jitpack.</p>
+
+<blockquote>
+  <p>At the end of this guide, you’ll be able to have something like :   <code class="highlighter-rouge">compile "my.company.library:version"</code></p>
+</blockquote>
+
+<p><br />
+Ready ? <strong>Let’s get Go</strong></p>
+
+<p>My current configuration is :</p>
+
+<ul>
+  <li>Gradle 2.11</li>
+  <li>Android Plugin for Gradle 2.1.0-beta1</li>
+  <li>Android Studio 2.1</li>
+  <li>MacOS X 10.10.5</li>
+</ul>
+
+<hr />
+<p><img src="/assets/images/mymavenrepo.png" alt="MyMavenRepo" width="40%" align="center" /></p>
+
+<p>Instead of building a private maven server repository which costs time and money, I’ve opted for a self hosted version called named <a href="https://mymavenrepo.com/">MyMavenRepo.com</a>, <strong>At the time of writing this article</strong>, the service remains free and offers 250mb of data plus supports maven and gradle build types.</p>
+
+<h4 id="1---setup-an-account">1 - Setup an Account</h4>
+<p>Okay, start by creating a new account, you’ll receive the password in your inbox.</p>
+
+<h4 id="2---setup-dev-environment">2 - Setup Dev Environment</h4>
+<p>Once on your dashboard, you’ll identify two different URLs:</p>
+
+<p><code class="highlighter-rouge">Read URL : https://mymavenrepo.com/repo/myUniqueID/</code><br />
+<code class="highlighter-rouge">Write URL : https://mymavenrepo.com/repo/myUniqueID/</code></p>
+
+<p>These urls are used to read/write data to our repository, they come with a unique ID to identify your repository, make sure to keep them private, if you don’t set any permissions, anyone could access your content.</p>
+
+<p>On the <code class="highlighter-rouge">HTTP Basic Auth</code> Section, click on <code class="highlighter-rouge">enable HTTP Basic Auth</code> to be able to restrict access by username and password.</p>
+
+<p><img src="/assets/images/mymavenrepo_urls.png" alt="MyMavenRepo Dashboard" /></p>
+
+<p>Once done, you’ll have to setup the authentification details, Click on <span style="padding:5px;background-color:#5DBD8E;color:white">Add User</span> and define your default user for both READ and WRITE urls, I won’t cover this part, it’s really up to you.</p>
+
+<p>Now, it’s time to export all these variables to our <code class="highlighter-rouge">gradle.properties</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ vim .gradle/gradle.properties
+</code></pre>
+</div>
+
+<p>Change with your password and repo url:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>myMavenRepoReadPassword=myPassword
+myMavenRepoWritePassword= myPassword
+myMavenRepoReadUrl=https://mymavenrepo.com/repo/uniqueID/
+myMavenRepoWriteUrl=https://mymavenrepo.com/repo/uniqueID/
+</code></pre>
+</div>
+
+<h4 id="3---update-your-dependency-project-and-push-content">3 - Update your dependency project and Push Content</h4>
+<p>Upgrade your library <code class="highlighter-rouge">build.gradle</code> file like below</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>apply plugin: 'maven-publish'
+	
+group = 'my.company'
+archivesBaseName = 'android-library'
+version = '0.1.4-SNAPSHOT'
+	
+publishing {
+    repositories {
+        maven {
+            url myMavenRepoWriteUrl
+            credentials {
+                username 'myMavenRepo'
+                password myMavenRepoReadPassword
+            }
+        }
+    }
+	
+    publications {
+        aar(MavenPublication) {
+            groupId group
+            artifactId archivesBaseName
+            version project.version
+			
+			// Optional
+            pom.withXml {
+                asNode().appendNode('name','Dependency Name')
+                asNode().appendNode('description','Dependency Description')
+                asNode().appendNode('url','http://medyo.github.com')
+            }
+
+            artifact("$buildDir/outputs/aar/${archivesBaseName}-release.aar")        }
+    }
+}
+</code></pre>
+</div>
+
+<p>Ready ? Go</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>./gradlew clean build publish
+</code></pre>
+</div>
+
+<p>If things go like expected, you should see in log the remote path of your dependency</p>
+
+<p><img src="/assets/images/mymavenrepo_upload.png" alt="MyMavenRepo Upload Gradle" /></p>
+
+<h4 id="4---distribution">4 - Distribution</h4>
+
+<p>Hooray ! You’re done, your library is ready to be shared with your teammates, Just Ask them to upgrade their gradle files</p>
+
+<p>Add this to your top <code class="highlighter-rouge">build.gradle</code> file:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>maven {
+	url "https://mymavenrepo.com/repo/UniqueID/"
+	credentials {
+		username = 'myMavenRepo'
+		password = '********'
+	}
+}
+</code></pre>
+</div>
+
+<p>And integrate your dependency like you you’ve always done :</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>compile 'my.company:android-library:0.1.4-SNAPSHOT'
+</code></pre>
+</div>
+
+<p>For any suggestions or questions, please post your comment below.
+Thanks</p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/ujjawal1729">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Ujjawal Anand</span>
+            <span>Software Developer - A jack of all Trades</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://andy1729.github.io/how-to-set-up-a-private-maven-repository-for-free - How to Set Up a Private Maven Repository For Free by @ujjawal1729"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'andy1729';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>
+    hljs.configure({
+      tabReplace: '   '
+    });
+    hljs.initHighlighting();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101837632-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+

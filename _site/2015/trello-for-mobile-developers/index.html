@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="article:publisher" content="https://www.facebook.com/andy2520" />
+  <meta property="article:author" content="https://www.facebook.com/andy2520" />
+  <link rel="author" href=""/>
+  <title>Trello for Mobile developers - Ujjawal Anand</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+
+    
+        
+    
+    
+    <a class="cta" href="/contact">Contact</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Trello for Mobile developers</h1>
+        <h2 class="headline">December 9, 2015</h2>
+    </header>
+    <section id="post-body">
+        <p>Trello, as everyone knows, is a great project management tool, it’s really easy and extremely flexible to fit many needs from digital work to daily life tasks.</p>
+
+<p>Today, I want to expand that flexibility in the way to make it more gratefully for mobile developers Android and iOS.
+The normal use case consists of using 3 default lists: <code class="highlighter-rouge">to-do</code>, <code class="highlighter-rouge">doing</code>, <code class="highlighter-rouge">done</code> which are correct and let us manage our tasks gratefully.</p>
+
+<p><img src="https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/d1e04e4b8e9f93a9671be5dc719b4f79/guide-board.png" alt="Trello" width="100%" /></p>
+
+<p>However on the mobile development field, doing this same manipulation will make us lose tracking of changes between versions. I mean how do you keep track of what you’re working on in this version, what was already shipped and finally what it’s planned for later.</p>
+
+<p>For these needs, I’ve opted for an <strong>alternative solution</strong> that relies on using Trello vertically and it’s resumed in 3 processes:</p>
+
+<ul>
+  <li>Creating new lists as many as our app versions</li>
+  <li>Renaming these lists according to a specific convention</li>
+  <li>Applying labels for each card according to the work status or type (working on, done, UI, bug …)</li>
+</ul>
+
+<p>Let’s see it in pictures:</p>
+
+<p><img src="/assets/images/trello_for_mobiledev.png" alt="Trello for mobile developers" /></p>
+
+<p>As you saw, each list is versioned, named according to app version, respecting the following convention: <code class="highlighter-rouge">version name</code> - <code class="highlighter-rouge">version code</code> - <code class="highlighter-rouge">Shared + date of sharing</code><br />
+eg: <code class="highlighter-rouge">Beta - v0.4 (Shared on 01/01/2016)</code><br />
+The last <code class="highlighter-rouge">Shared on</code> item expresses if the app was shared with the client or even deployed on the store with the specified date of this action.
+That’s a basic convention that I’d recommend, but of course, you could tweak it as you like to match your needs.</p>
+
+<p>Let’s see labels:</p>
+
+<p><img src="/assets/images/trello_labels_for_mobiledev.png" alt="Trello Labels" width="200" /><br />
+As you noticed before, we’re no longer using default lists to indicate the status of our work since their role have changed to handle tasks relating to app versions.<br />
+We’ll substitute this lack by using labels which go perfectly with our case. Mandatory ones that should be available in any project are :</p>
+
+<ul>
+  <li>Doing</li>
+  <li>Done</li>
+</ul>
+
+<p>These, are basic, add new labels as many as you need <code class="highlighter-rouge">UI</code>, <code class="highlighter-rouge">UX</code> or even <code class="highlighter-rouge">Bug</code> …</p>
+
+<h3 id="bonus">Bonus</h3>
+
+<p>One more great thing, that’s this new way of managing my Trello saved me time to mark which changes are made in each version, so no more worries about Changelogs on Google Play or AppStore. Here is an example taken from <em>Clean Master</em> app.</p>
+
+<p><img src="/assets/images/cleanmaster_changelog.png" alt="Clean Master" width="300" /></p>
+
+<p>Hope this technique could improve your development workflow.
+Let me know what’s your favorite way of managing such projects ?</p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/ujjawal1729">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Ujjawal Anand</span>
+            <span>Software Developer - A jack of all Trades</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://andy1729.github.io/2015/trello-for-mobile-developers/ - Trello for Mobile developers by @ujjawal1729"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'andy1729';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>
+    hljs.configure({
+      tabReplace: '   '
+    });
+    hljs.initHighlighting();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101837632-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+

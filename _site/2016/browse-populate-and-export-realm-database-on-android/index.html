@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="article:publisher" content="https://www.facebook.com/andy2520" />
+  <meta property="article:author" content="https://www.facebook.com/andy2520" />
+  <link rel="author" href=""/>
+  <title>Browse, Populate and Export Realm Database On Android - Ujjawal Anand</title>
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="My Blog" href="/rss.xml">
+  <link rel="stylesheet" href="/assets/css/highlight.css">
+</head>
+<body>
+
+  <nav class="main-nav">
+    
+        <a href="/"> <span class="arrow">←</span> Home </a>
+    
+
+    
+        
+            <a href="/about">About </a>
+        
+    
+
+    
+        
+    
+    
+    <a class="cta" href="/contact">Contact</a>
+</nav>
+
+  
+
+  <section id="wrapper" class="">
+    <article class="post">
+    <header>
+        <h1>Browse, Populate and Export Realm Database On Android</h1>
+        <h2 class="headline">February 5, 2016</h2>
+    </header>
+    <section id="post-body">
+        <p>I remember discovering <a href="https://realm.io/">Realm</a> library on <a href="http://qudos.io">qudos.io</a>, it was really something magic compared to other database libraries. Realm is written in c++ and describe itself as a SQLite replacement.
+According to many benchmarks, Realm provides superior performance and cool queries syntax that really motivated me to give it a try…</p>
+
+<p><img src="http://zanon.io/images/posts/2015-11-01-benchmark.png" alt="Realm Browser" width="100%" />
+<a href="http://zanon.io/posts/realm-an-incredible-fast-mobile-db">Source</a></p>
+
+<p>Realm really met all my expectations, so I decided to test it on production. One of the issues that actually bothered me, is the lack of a database viewer especially for Linux since I’m switching between Ubuntu and Mac all the time, So I decided to make a quick tutorial on how to browse Realm database on these these environments.</p>
+
+<h4 id="for-mac-users">For Mac users:</h4>
+<p>If you’re a Mac user, Realm team already provides <a href="https://itunes.apple.com/app/realm-browser/id1007457278">Realm Browser</a>, please refer to <a href="#pull-database">the next paragraph</a> to figure out how to extract the database from your device.</p>
+
+<h5 id="how-to-pull-database-from-the-device"><a name="pull-database"></a>How to pull database from the device</h5>
+
+<p>Since this task might be repetitive along your development process, I’ve made a quick bash script that pulls the database from the device to your desktop. The script is very simpl, pull requests are more than welcome.</p>
+
+<script src="https://gist.github.com/medyo/f4b4e3efb5f2299a8a1c.js"></script>
+
+<h4 id="for-linux-and-windows-users">For Linux and Windows users:</h4>
+<p>Things are different here, Realm doesn’t provide any official browser for Linux (Ubuntu …) or Windows. However we’re hackers, finding solutions is our hobby :)</p>
+
+<p>We will rely on <a href="http://facebook.github.io/stetho/">Stetho</a>, a Facebook library that works as debugging bridge, we will combine it with <a href="https://github.com/uPhyca/stetho-realm">Stetho-Realm</a>, a module that make Realm database readable by Stetho.</p>
+
+<p>Enough talk, <strong>Let’s see that in action</strong> :</p>
+
+<ol>
+  <li>Install the following dependencies</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>repositories {
+    maven {
+        url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo'
+    }
+}
+dependencies {
+    compile 'com.facebook.stetho:stetho:1.3.0' 
+    compile 'com.uphyca:stetho_realm:0.8.0'
+}
+
+</code></pre>
+</div>
+
+<ol>
+  <li>initialize stetho on your Application class (onCreate) :</li>
+</ol>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>public class MyFancyApp extends Application {
+@Override
+    public void onCreate() {
+    	super.onCreate();
+        Stetho.initialize(
+			Stetho.newInitializerBuilder(this)
+			.enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+			.enableWebKitInspector(RealmInspectorModulesProvider.builder(this).build())
+		   build());
+	}
+}
+</code></pre>
+</div>
+
+<ol>
+  <li>Launch your app</li>
+  <li>Once started, Open Chrome Browser, type <code class="highlighter-rouge">chrome://inspect</code> and choose your running device then navigate to <code class="highlighter-rouge">resources</code> and finally <code class="highlighter-rouge">Web Sql</code>.</li>
+  <li>And voila, you should see your database entries there.</li>
+</ol>
+
+<p><img src="/assets/images/realm-stetho.png" alt="realm stetho" /></p>
+
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/ujjawal1729">
+        <img class="avatar" src="/assets/images/avatar.png">
+        <div>
+            <span class="dark">Ujjawal Anand</span>
+            <span>Software Developer - A jack of all Trades</span>
+        </div>
+    </a>
+
+    <section id="sharing">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text=http://andy1729.github.io/2016/browse-populate-and-export-realm-database-on-android/ - Browse, Populate and Export Realm Database On Android by @ujjawal1729"><span class="icon-twitter"> Tweet</span></a>
+
+<a class="facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"><span class="icon-facebook-rect"> Share</span>
+</a>
+    </section>
+</footer>
+
+<!-- Disqus comments -->
+
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        <section class="disqus">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'andy1729';
+        var disqus_developer = 0; // developer mode is on
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+    </div>
+
+
+<!-- Archive post list -->
+
+
+
+
+
+  </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/highlight.js"></script>
+  <script>
+    hljs.configure({
+      tabReplace: '   '
+    });
+    hljs.initHighlighting();</script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-101837632-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+</html>
+
+
+

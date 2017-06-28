@@ -1,19 +1,6 @@
 ---
-layout: default
+profile: true
 ---
-<header class="site-hero" style="background-image: url({{site.baseurl}}/images/header.jpg)"></header>
-<div class="wrapper">
-  <div class="home">
-<ul class="post-list">
-  {% for post in site.posts %}
-    <li>
-      <span class="post-meta">{{ post.date | date: "%B %e, %Y" }}</span>
 
-      <h2>
-        <a class="post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h2>
-    </li>
-  {% endfor %}
-</div>
-</div>
-</div>
+{% include post-list.html %}
+{% include footer.html %}

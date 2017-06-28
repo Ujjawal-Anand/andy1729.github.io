@@ -1,0 +1,19 @@
+<nav class="main-nav">
+    {% if page.url != "/index.html" %}
+        <a href="{{ site.baseurl }}"> <span class="arrow">←</span> Home </a>
+    {% endif %}
+
+    {% if page.url != "/about/" %}
+        {% if site.aboutPage %}
+            <a href="{{ site.baseurl }}about">About </a>
+        {% endif %}
+    {% endif %}
+
+    {% if page.url != "/portfolio/" %}
+        {% if site.portfolioPage %}
+            <a href="{{ site.baseurl }}portfolio">Portfolio </a>
+        {% endif %}
+    {% endif %}
+    
+    <a class="cta" href="{{ site.baseurl }}contact">Contact</a>
+</nav>
