@@ -29,9 +29,9 @@
 
 
   <body>
-    <section id="about"><h1 class="intro">Hi, I'm Ujjawal </h1><p>I'm a<b> a software developer</b> with a knack for<b> entrepreneurship.</b>
+    <section id="about"><h1 class="intro">Hi, I'm Ujjawal </h1><p>I'm a<b> a software devloper</b> with a knack for<b> entrepreneurship.</b>
      I design, build, and ship software that makes the world a better place.</p>
-     <p> I've also worked as a freelancer and successfully delivered the desired product in due time frame</p>
+     <p> I've also worked as a freelancer and succefully delivered the desired product in due timeframe</p>
       <i>Quick Links:&nbsp;<a href="#work">Work</a> -&nbsp;<a href="#projects">Projects</a>
         -&nbsp;<a href="https://github.com/andy1729" target="_blank">Github</a>
         -&nbsp;<a href="https://twitter.com/ujjawal1729" target="_blank">Twitter</a> </i></section>
@@ -52,8 +52,8 @@
 
           <section id="work"><h1>Work</h1>
             <div class="grid"><h3>Android App</h3><small><b>Jee Helper</b><span class="work-date"> May '16 - Present</span></small>
-              <hr/><p>Working on  android app targeted for students preparing for IIT-JEE to help them regarding their preparation. The app has features like chapter wise formula, previous year papers and a quiz  functionality to
-              test the preparation. </p>
+              <hr/><p>Working on  android app targeted for students preparing for IIT-JEE to help them regarding their prepration. The app has features like chapter wise formulae, previous year papers and a quiz  functionality to
+              test the prepration. </p>
               <h3>Freelancing</h3><small><b> TOQC </b><span class="work-date">Dec '16 </span></small><hr/>
               <p>TOQC is an android quiz app, I created for a client. Click on &nbsp;<a href="https://play.google.com/store/apps/details?id=in.andy1729.toqc" target="_blank">Google-Play link</a> to more about the work </p>
               </div>
@@ -65,7 +65,7 @@
    Here are some of my favourite ones:</p>
    <ul><li><a href="https://github.com/andy1729/CyberoamMayhem" target="_blank">CyberoamMayhem</a> - Perform a brute force dictionary attack on Cyberoam Web Client"</li>
      <li><a href="https://github.com/andy1729/20_websites_in_20_days" target="_blank">20 websites in 20 days</a> - Learned front end web development by creating 20 websites in 20 days</li>
-     <li><a href="https://github.com/andy1729/andy1729.github.io" target="_blank">My Personal Website</a> - My personal website (this one) using Jekyll and other web technologies</li>
+     <li><a href="https://github.com/andy1729/andy1729.github.io" target="_blank">My Personal Website</a> - My personal website (this one) using Jekyll and other web technolgies</li>
      <li><a href="https://github.com/andy1729/camTerm" target="_blank">CamTerm</a> -A webcam that can run in bare terminal.</li>
      </section>
 
