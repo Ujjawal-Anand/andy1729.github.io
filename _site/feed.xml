@@ -3,21 +3,8 @@
   <channel>
     <title>Ujjawal Anand</title>
     <description>Software Developer - A jack of all Trades</description>
-    <link>http://localhost:4000</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    
-      <item>
-        <title>Auto Backup OpenShift Database to Dropbox</title>
-        
-        
-          <description>&lt;p&gt;Due to privilieges restriction (&lt;a href=&quot;https://www.openshift.com/&quot;&gt;Openshift&lt;/a&gt; free Plan), you’ll certainly find difficulties to backup your database using the well known gems, plugins available in Github such as &lt;a href=&quot;https://github.com/backup/backup&quot;&gt;Backup Gem&lt;/a&gt;. Since majoriy of these tools require write/read permissions to create and load configuration files.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 06 May 2017 07:23:06 +0530</pubDate>
-        <link>http://localhost:4000/2017/backup-openshift-database/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/backup-openshift-database/</guid>
-      </item>
+    <link>http://andy1729.github.io/</link>
+    <atom:link href="http://andy1729.github.io//feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
         <title>My Review of the Best Books I Read in 2016</title>
@@ -30,8 +17,8 @@ give me most out of the time I invest in them.&lt;/p&gt;
 </description>
         
         <pubDate>Thu, 02 Feb 2017 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2017/Book-Review-2016/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Book-Review-2016/</guid>
+        <link>http://andy1729.github.io//2017/Book-Review-2016/</link>
+        <guid isPermaLink="true">http://andy1729.github.io//2017/Book-Review-2016/</guid>
       </item>
     
       <item>
@@ -46,8 +33,8 @@ give me most out of the time I invest in them.&lt;/p&gt;
 </description>
         
         <pubDate>Tue, 31 Jan 2017 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2017/Top-Reads-2016/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Top-Reads-2016/</guid>
+        <link>http://andy1729.github.io//2017/Top-Reads-2016/</link>
+        <guid isPermaLink="true">http://andy1729.github.io//2017/Top-Reads-2016/</guid>
       </item>
     
       <item>
@@ -59,87 +46,8 @@ give me most out of the time I invest in them.&lt;/p&gt;
 </description>
         
         <pubDate>Mon, 30 Jan 2017 00:00:00 +0530</pubDate>
-        <link>http://localhost:4000/2017/Hello-World/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/Hello-World/</guid>
-      </item>
-    
-      <item>
-        <title>How to Set Up a Private Maven Repository For Free</title>
-        
-        
-          <description>&lt;p&gt;Being a fan of factorisation, I recently decided to extract some redundant modules from my released Android Apps and make them standalone to be used in future projects. I ended up having easy to use dependencies like this &lt;code class=&quot;highlighter-rouge&quot;&gt;compile {libraryName}&lt;/code&gt;, seems cool ? nah ?&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Thu, 21 Apr 2016 03:49:19 +0530</pubDate>
-        <link>http://localhost:4000/how-to-set-up-a-private-maven-repository-for-free</link>
-        <guid isPermaLink="true">http://localhost:4000/how-to-set-up-a-private-maven-repository-for-free</guid>
-      </item>
-    
-      <item>
-        <title>Generate Awesome PlayStore Screenshots using Sketch</title>
-        
-        
-          <description>&lt;p&gt;&lt;img src=&quot;/assets/images/playstore-generator.png&quot; alt=&quot;playstore generator&quot; /&gt;&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 10 Apr 2016 03:11:27 +0530</pubDate>
-        <link>http://localhost:4000/generate-awesome-playstore-screenshots-using-sketch</link>
-        <guid isPermaLink="true">http://localhost:4000/generate-awesome-playstore-screenshots-using-sketch</guid>
-      </item>
-    
-      <item>
-        <title>Customize Facebook Login Button On Android</title>
-        
-        
-          <description>&lt;p&gt;If you do a quick lookup on stackoverflow, you’ll find many answers (hacks) trying to solve this issue by editing the login button view to make it more suitable to the user need.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sun, 13 Mar 2016 18:56:26 +0530</pubDate>
-        <link>http://localhost:4000/customize-facebook-login-button-on-android</link>
-        <guid isPermaLink="true">http://localhost:4000/customize-facebook-login-button-on-android</guid>
-      </item>
-    
-      <item>
-        <title>Browse, Populate and Export Realm Database On Android</title>
-        
-        
-          <description>&lt;p&gt;I remember discovering &lt;a href=&quot;https://realm.io/&quot;&gt;Realm&lt;/a&gt; library on &lt;a href=&quot;http://qudos.io&quot;&gt;qudos.io&lt;/a&gt;, it was really something magic compared to other database libraries. Realm is written in c++ and describe itself as a SQLite replacement.
-According to many benchmarks, Realm provides superior performance and cool queries syntax that really motivated me to give it a try…&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Fri, 05 Feb 2016 05:43:17 +0530</pubDate>
-        <link>http://localhost:4000/2016/browse-populate-and-export-realm-database-on-android/</link>
-        <guid isPermaLink="true">http://localhost:4000/2016/browse-populate-and-export-realm-database-on-android/</guid>
-      </item>
-    
-      <item>
-        <title>Trello for Mobile developers</title>
-        
-        
-          <description>&lt;p&gt;Trello, as everyone knows, is a great project management tool, it’s really easy and extremely flexible to fit many needs from digital work to daily life tasks.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Wed, 09 Dec 2015 06:01:47 +0530</pubDate>
-        <link>http://localhost:4000/2015/trello-for-mobile-developers/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/trello-for-mobile-developers/</guid>
-      </item>
-    
-      <item>
-        <title>Different Android app resources (icon, title ...) according to gradle build type</title>
-        
-        
-          <description>&lt;p&gt;In the usual Android development process, coding, releasing and testing, is a repetitive flux that involves generating new &lt;code class=&quot;highlighter-rouge&quot;&gt;apk&lt;/code&gt; each time a new build is done. I know, At this point everything is ordinary.&lt;/p&gt;
-
-</description>
-        
-        <pubDate>Sat, 28 Nov 2015 15:43:00 +0530</pubDate>
-        <link>http://localhost:4000/2015/different-android-app-resources-gradle-build-type/</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/different-android-app-resources-gradle-build-type/</guid>
+        <link>http://andy1729.github.io//2017/Hello-World/</link>
+        <guid isPermaLink="true">http://andy1729.github.io//2017/Hello-World/</guid>
       </item>
     
   </channel>
